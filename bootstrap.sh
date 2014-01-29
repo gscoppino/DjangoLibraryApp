@@ -8,11 +8,13 @@ apt-get install -y  python python-pip
 # Server and WSGI: apt-get install -y apache2 apache2-prefork-dev libapache2-mod-wsgi
 
 # Database
-echo 'mysql-server-5.5 mysql-server/root_password password ' | sudo debconf-set-selections
-apt-get install -y mysql-server-5.5
+echo 'mysql-server mysql-server/root_password password toor' | debconf-set-selections
+echo 'mysql-server mysql-server/root_password_again password toor' | debconf-set-selections 
+apt-get install -y mysql-server
 apt-get install -y python-mysqldb
 
 # Django framework
 pip install Django==1.6.1
 
+# Create a symbolic link to the project into the home dir
 ln -s /vagrant/DjangoLibraryApp /home/vagrant
