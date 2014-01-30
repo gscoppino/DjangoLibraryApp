@@ -57,8 +57,12 @@ WSGI_APPLICATION = 'DjangoLibraryApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DjangoLibraryApp',
+	'USER': 'root',
+	'PASSWORD': 'toor',
+	'HOST': '127.0.0.1',
+	'PORT': '3306'
     }
 }
 
@@ -67,7 +71,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 

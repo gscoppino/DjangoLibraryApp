@@ -18,3 +18,10 @@ pip install Django==1.6.1
 
 # Create a symbolic link to the project into the home dir
 ln -s /vagrant/DjangoLibraryApp /home/vagrant
+
+# Create the main MySQL database
+echo "CREATE DATABASE DjangoLibraryApp" | mysql -u root -ptoor
+
+# Create necessary Django database tables for INSTALLED_APPS
+cd /vagrant/DjangoLibraryApp
+echo -e "yes\nroot\nscoppino.giuseppe@gmail.com\ntoor\ntoor" | python manage.py syncdb
