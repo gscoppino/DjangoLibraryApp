@@ -27,13 +27,16 @@ class Book(models.Model):
     def __unicode__(self):
         return self.title
 
-    shelf = models.ForeignKey(Shelf)
+    shelf = models.ManyToManyField(Shelf)
     shelf_code = models.CharField(max_length=5)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
-    subject = models.CharField(max_length=50)
+    genre = models.CharField(max_length=50)
     language = models.CharField(max_length=25)
     publisher = models.CharField(max_length=100)
     pub_date = models.DateTimeField('Date published')
-    isbn = models.IntegerField()
+    isbn = models.CharField(max_length=20)
     copies = models.IntegerField(default=0)
+
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now - datetime.timedelta(days=30)
