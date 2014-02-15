@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Library',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -59,10 +60,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'DjangoLibraryApp',
-	'USER': 'root',
-	'PASSWORD': 'toor',
-	'HOST': '127.0.0.1',
-	'PORT': '3306'
+        'USER': 'root',
+        'PASSWORD': 'toor',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
     }
 }
 
