@@ -27,8 +27,8 @@ class Book(models.Model):
     def __unicode__(self):
         return self.title
 
-    shelf = models.ManyToManyField(Shelf)
-    shelf_code = models.CharField(max_length=5)
+    shelves = models.ManyToManyField(Shelf)
+    shelf_codes = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
