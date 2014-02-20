@@ -10,8 +10,8 @@ class Library(models.Model):
         return self.name
     
     name = models.CharField(max_length=100)
-    num_books = models.IntegerField(default=0)
-    num_shelves = models.IntegerField(default=0)
+    shelf_capacity = models.IntegerField(default=0)
+    book_capacity = models.IntegerField(default=0)
 
 class Shelf(models.Model):
     
@@ -20,15 +20,15 @@ class Shelf(models.Model):
 
     library = models.ForeignKey(Library)
     shelf_code = models.CharField(max_length=5)
-    num_books = models.IntegerField(default=0)
+    book_capacity = models.IntegerField(default=0)
     
 class Book(models.Model):
     
     def __unicode__(self):
         return self.title
-
+    
+    libraries = models.ManyToManyField(Library)
     shelves = models.ManyToManyField(Shelf)
-    shelf_codes = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
