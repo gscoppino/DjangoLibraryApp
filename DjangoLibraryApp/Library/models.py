@@ -10,25 +10,36 @@ class Library(models.Model):
         return self.name
     
     name = models.CharField(max_length=100)
-    shelf_capacity = models.IntegerField(default=0)
-    book_capacity = models.IntegerField(default=0)
+    max_shelves = models.IntegerField(default=0)
+    max_books = models.IntegerField(default=0)
+    
+    def shelves(self):
+        return self.shelf_set.count()
+
+    def books(self):
+        num_books = 0
+        for shelf in self.shelf_set.all():
+            num_books += shelf.book_set.count()
+        return num_books
 
 class Shelf(models.Model):
     
     def __unicode__(self):
-        return self.shelf_code
+        return self.library.name + "_" + self.shelf_code
 
     library = models.ForeignKey(Library)
     shelf_code = models.CharField(max_length=5)
-    book_capacity = models.IntegerField(default=0)
+    max_books = models.IntegerField(default=0)
+
+    def books(self):
+        return self.book_set.count()
     
 class Book(models.Model):
     
     def __unicode__(self):
         return self.title
     
-    libraries = models.ManyToManyField(Library)
-    shelves = models.ManyToManyField(Shelf)
+    shelf = models.ForeignKey(Shelf)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
@@ -36,7 +47,7 @@ class Book(models.Model):
     publisher = models.CharField(max_length=100)
     pub_date = models.DateTimeField('Date published')
     isbn = models.CharField(max_length=20)
-    copies = models.IntegerField(default=0)
+    condition = models.CharField(max_length=10)
 
     def was_published_recently(self):
-        return self.pub_date >= timezone.now - datetime.timedelta(days=30)
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=30)
