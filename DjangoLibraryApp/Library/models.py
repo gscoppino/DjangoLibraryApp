@@ -48,6 +48,17 @@ class Book(models.Model):
     pub_date = models.DateTimeField('Date published')
     isbn = models.CharField(max_length=20)
     condition = models.CharField(max_length=10)
+    checkout_status = models.BooleanField(default=False)
+
+    def availability(self):
+        if self.checkout_status == True:
+            return "Checked Out"
+        else:
+            return "Available"
+    availability.admin_order_field = "checkout_status"
 
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=30)
+    was_published_recently.admin_order_field = "pub_date"
+    was_published_recently.short_description = "Published Recently?"
+    was_published_recently.boolean = True
