@@ -1,5 +1,8 @@
 from django.db import models
 
+# Used to handle model edge-cases
+from django.core.exceptions import ValidationError
+
 # For use in time related calculations
 from django.utils import timezone
 import datetime
@@ -33,6 +36,12 @@ class Shelf(models.Model):
 
     def books(self):
         return self.book_set.count()
+  
+    def clean(self):
+        if self.library.shelves() == self.library.max_shelves:
+            raise ValidationError("Failed to add shelf to library; library is at shelf capacity!")
+        if self.library.books() + self.books() > self.library.max_books:
+            raise ValidationError("Failed to add shelf to library; library is at book capacity!")
     
 class Book(models.Model):
     
@@ -62,3 +71,7 @@ class Book(models.Model):
     was_published_recently.admin_order_field = "pub_date"
     was_published_recently.short_description = "Published Recently?"
     was_published_recently.boolean = True
+
+    def clean(self): 
+        if self.shelf.books() == self.shelf.max_books:
+            raise ValidationError("Failed to add book to shelf; shelf is full!")
