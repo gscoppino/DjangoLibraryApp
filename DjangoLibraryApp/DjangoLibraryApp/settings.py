@@ -23,6 +23,7 @@ SECRET_KEY = '6f_ve1)!x*n_^2v9*9-i8eck612qy=r(_k+pul1+q(13itjmm1'
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'DjangoLibraryApp/templates')]
 
 ALLOWED_HOSTS = []
 
