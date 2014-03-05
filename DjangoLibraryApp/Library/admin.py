@@ -10,30 +10,50 @@ class ShelfInline(admin.TabularInline):
     fields = ('shelf_code', 'max_books')
     readonly_fields = ('shelf_code', 'max_books')
 
+    def has_add_permission(self, request):
+        return False
+
 class BookInline(admin.TabularInline):
     model = Book
     extra = 0
-    fields = ('title', 'author', 'isbn', 'condition')
-    readonly_fields = ('title', 'author', 'isbn', 'condition')
+    fields = ('title', 'author', 'isbn', 'condition', 'availability')
+    readonly_fields = ('title', 'author', 'isbn', 'condition', 'availability')
+
+    def has_add_permission(self, request):
+        return False
 
 class LibraryAdmin(admin.ModelAdmin):
     list_display = ('name', 'shelves', 'max_shelves', 'books', 'max_books')
+    search_fields = ['name']
     fieldsets = [
         ('Name',        {'fields': ['name']}),
-        ('Inventory',   {'fields': ['max_shelves', 'max_books']}),
+        ('Inventory',   {'fields': [('max_shelves', 'max_books')]}),
     ]
     inlines = [ShelfInline]
+
+    def get_formsets(self, request, obj=None):
+        for inline in self.get_inline_instances(request, obj):
+            if isinstance(inline, ShelfInline) and obj is None:
+                continue
+            yield inline.get_formset(request,obj)
 
 class ShelfAdmin(admin.ModelAdmin):
     list_display = ('library', 'shelf_code', 'books', 'max_books')
     fieldsets = [
-        ('Inventory', {'fields': ['library', 'shelf_code', 'max_books']}),
+        ('Inventory', {'fields': ['library', ('shelf_code', 'max_books')]}),
     ]
     inlines = [BookInline]
+
+    def get_formsets(self, request, obj=None):
+        for inline in self.get_inline_instances(request, obj):
+            if isinstance(inline, BookInline) and obj is None:
+                continue
+            yield inline.get_formset(request,obj)
     
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'publisher', 'pub_date', 'genre', 'language', 'isbn', 'condition')
-    list_filter = ['author', 'publisher', 'genre', 'pub_date', 'language']
+    list_display =  ('title', 'author', 'publisher', 'genre', 'language', 'isbn', 'availability', 'condition') 
+    list_filter =   ['author', 'publisher', 'genre', 'language', 'checkout_status']
+    search_fields = ['title', 'author', 'publisher']
     fieldsets = [
         ('Inventory', {'fields': ['shelf', 'condition']}),
         ('Basic Information', {'fields': ['title', 'author', 'isbn']}),
