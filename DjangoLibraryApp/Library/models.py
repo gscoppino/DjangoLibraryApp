@@ -48,13 +48,13 @@ class Book(models.Model):
     def __unicode__(self):
         return self.title
     
-    shelf = models.ForeignKey(Shelf, blank=True)
+    shelf = models.ForeignKey(Shelf, null=True, blank=True)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     genre = models.CharField(max_length=50, blank=True)
     language = models.CharField(max_length=25, blank=True)
     publisher = models.CharField(max_length=100)
-    pub_date = models.DateTimeField('Date published')
+    pub_date = models.DateField('Date published')
     isbn = models.CharField(max_length=20)
     condition = models.CharField(max_length=10, blank=True)
     checkout_status = models.BooleanField(default=False)
@@ -73,5 +73,5 @@ class Book(models.Model):
     was_published_recently.boolean = True
 
     def clean(self): 
-        if self.shelf.books() == self.shelf.max_books:
+        if self.shelf and self.shelf.books() == self.shelf.max_books:
             raise ValidationError("Failed to add book to shelf; shelf is full!")
