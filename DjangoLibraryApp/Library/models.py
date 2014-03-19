@@ -48,15 +48,15 @@ class Book(models.Model):
     def __unicode__(self):
         return self.title
     
-    shelf = models.ForeignKey(Shelf)
+    shelf = models.ForeignKey(Shelf, blank=True)
     title = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
-    genre = models.CharField(max_length=50)
-    language = models.CharField(max_length=25)
+    genre = models.CharField(max_length=50, blank=True)
+    language = models.CharField(max_length=25, blank=True)
     publisher = models.CharField(max_length=100)
     pub_date = models.DateTimeField('Date published')
     isbn = models.CharField(max_length=20)
-    condition = models.CharField(max_length=10)
+    condition = models.CharField(max_length=10, blank=True)
     checkout_status = models.BooleanField(default=False)
 
     def availability(self):
