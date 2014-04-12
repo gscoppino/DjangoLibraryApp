@@ -1,0 +1,94 @@
+<html>
+	<head>
+        {% load staticfiles %}
+		<h1 class="title">Library System</h1>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Library System</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'Library/css/styles.css' %}" />
+	</head>
+
+	<body onload = "Clock(); setInterval('Clock()', 1000)">
+		<div id = "container">
+
+            <div id = "clock" style="text-align:center;">
+                <span id="clock"></span>
+            </div>
+
+			<a href="http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
+
+			<div id = "header"> 
+				<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
+				<a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books in the library system.">Books</a> | 
+				<a class="menu" href="survey.html">Survey</a> |
+				<a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> 
+			
+                <div id="description">	
+                    <h2><u><strong>Description</strong></u></h2>
+                    <p><em>Welcome, [user or guest]. </em></p>
+
+                    <p>Choose a library from the drop-down menu to browse its available books.</p> 
+                </div>
+
+				<select id="library_selector"> 
+					<option></option>
+                    {% for library in library_list.all %}
+                        <option value="/library/{{ library.id }}">{{ library.name }}</option>
+                    {% endfor %}
+				</select>
+                <button type="submit" onclick="window.location(document.getElementById('library_selector').value);">Go</button>
+			</div>
+        </div>
+		<div id = "news">
+            <h2><b><u>News</u></b></h2>
+            <ul>
+                <li><a class = "news_item" href = "http://imgur.com/eFiEr2P">"Thousands killed in tabling accident."</a>
+                <li><a class = "news_item" href = "http://i.imgur.com/cLMG6fr.jpg">"Cows. Smarter than humans?"</a>
+                <li><a class = "news_item" href = "http://i.imgur.com/QHaG2yC.jpg">"This guy learned one easy trick to overcome disease through willpower.  Cancer doctors hate him!"</a>
+            </ul>
+		</div>
+		
+		<div id = "books">
+			<h2><b><u>Books</u></b></h2>
+			<h4>Currently Checked Out</h4>
+			<ul>
+				<li>Book 1 <!-- Grab from DB? Hell Yea.-->
+				<li>Book 2
+			</ul>
+			
+			<h4>Recently Checked Out</h4>
+			<ul>
+				<li>Book 3</li>
+				<li>Book 4</li>
+			</ul>
+		</div>
+		
+	
+        <script type = "text/javascript">
+            function Clock()
+            {
+                /* Clock To Do List
+                *  ----------------------
+                * Get current time, then add to it
+                * Display time and date at bottom of screen
+                */
+                var now = new Date();
+                var hours = now.getHours();
+                var minutes = now.getMinutes();
+                var seconds = now.getSeconds();
+                
+                minutes = ( minutes < 10 ? "0" : "" ) + minutes;
+                seconds = ( seconds < 10 ? "0" : "" ) + seconds;
+                
+                var timeOfDay = ( hours < 12 ) ? "AM" : "PM";
+                hours = ( hours > 12 ) ? hours - 12 : hours;
+                hours = ( hours == 0 ) ? 12 : hours;
+                
+                var currentTimeString = hours + ":" + minutes + ":" + seconds + " " + timeOfDay;
+                document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+                
+            }
+        </script>
+
+
+	</body>
+</html>

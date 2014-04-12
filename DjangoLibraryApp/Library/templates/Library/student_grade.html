@@ -1,0 +1,143 @@
+<html>
+	<head>
+        {% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'Library/css/styles.css' %}" />
+		<h1 class ="title">Library System</h1>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+			<title>
+				Library System
+			</title>
+	</head>
+	
+	<body>
+		<div id = "container">
+			<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="img/southern-polytechnic-state-university.gif"></a>
+			<div id = "header">Menu: 
+				<a class="menu" href="index.html">Home</a> | 
+				<a class="menu" href="faculty.html">Faculty</a> | 
+				<a class="menu" href="survey.html">Survey</a> |
+				<a class="menu" href="student_grade.html">Book Selector</a>
+			<br>
+			<p>Quick Links: 
+			<select onchange = "window.open(this.value, '_self', '');">
+				<option> </option>
+				<option value = "index.html">Home</option>
+				<option value = "faculty.html">Faculty</option>
+				<option value = "survey.html">Survey</option>
+				<option value = "student_grade.html">Book Selector</option>
+			</select></p>
+			</div>
+			<form>
+				<br>
+                {% for shelf in library.shelf_set.all %}
+                    <div id="shelf{{shelf.id}}">
+                        <h2>{{shelf}}</h2>
+                        <ul>
+                            {% for book in shelf.book_set.all %}
+                                <li class="book">
+                                <input type="checkbox"></input>
+                                <a id="book{{book.id}}" href="/book/{{book.id}}">{{book.title}}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+                <!--
+				Select how many copies of each book you'd like. <br><br>
+				Book 1:
+				<select id = "book1">
+					<option value ="4">5</option>
+					<option value ="3">4</option>
+					<option value ="2">3</option>
+					<option value ="1">2</option>
+					<option value ="0">1</option>
+				</select>
+				<br><br>
+				Book 2:
+				<select id = "book2">
+					<option value ="4">5</option>
+					<option value ="3">4</option>
+					<option value ="2">3</option>
+					<option value ="1">2</option>
+					<option value ="0">1</option>
+				</select>
+				<br><br>
+				Book 3:
+				<select id = "book3">
+					<option value ="4">5</option>
+					<option value ="3">4</option>
+					<option value ="2">3</option>
+					<option value ="1">2</option>
+					<option value ="0">1</option>
+				</select>
+				<br><br>
+				Book 4:
+				<select id = "book4">
+					<option value ="4">5</option>
+					<option value ="3">4</option>
+					<option value ="2">3</option>
+					<option value ="1">2</option>
+					<option value ="0">1</option>
+				</select>
+				<br><br>
+				Book 5:
+				<select id = "book5">
+					<option value ="4">5</option>
+					<option value ="3">4</option>
+					<option value ="2">3</option>
+					<option value ="1">2</option>
+					<option value ="0">1</option>
+				</select>
+				<br><br>
+                -->
+				<button>Submit</button>
+			<!--	<script type = "text/javascript">
+					
+					function calculate()
+					{
+						var grades = new Array();
+						var total = 0;
+						var avg = 0;
+						
+						var grade1 = parseInt(document.getElementById("grade_class1").value);
+						grades[0] = grade1;
+						
+						var grade2 = parseInt(document.getElementById("grade_class2").value);
+						grades[1] = grade2;
+						
+						var grade3 = parseInt(document.getElementById("grade_class3").value);
+						grades[2] = grade3;
+						
+						var grade4 = parseInt(document.getElementById("grade_class4").value);
+						grades[3] = grade4;
+						
+						var grade5 = parseInt(document.getElementById("grade_class5").value);
+						grades[4] = grade5;
+							
+						for(var i = 0; i< grades.length; i++)
+						{
+							total += grades[i];
+						}
+						
+						
+						avg = total/grades.length;
+						if(avg >= 3.5)
+						{
+							pop("Congratulations! Your GPA is: " + avg + "\nYou should apply to work for HIT.");
+						}
+						else
+						{
+							pop("Your GPA is: " + avg + "\nUnfortunately you do not qualify to work for HIT.");
+						}
+						return avg;
+					}
+					
+					function pop(message)
+					{
+						alert(message);
+					}
+				</script> -->
+			</form>
+		</div>
+	</body>
+</html>
