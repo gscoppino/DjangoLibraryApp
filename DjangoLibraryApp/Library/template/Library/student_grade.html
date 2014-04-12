@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<h1 class ="title">Library System</h1>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+			<title>
+				Library System
+			</title>
+	</head>
+	
+	<body>
+		<div id = "container">
+			<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="img/southern-polytechnic-state-university.gif"></a>
+			<div id = "header">Menu: 
+				<a class="menu" href="index.html">Home</a> | 
+				<a class="menu" href="faculty.html">Faculty</a> | 
+				<a class="menu" href="survey.html">Survey</a> |
+				<a class="menu" href="student_grade.html">Book Selector</a>
+			<br>
+			<p>Quick Links: 
+			<select onchange = "window.open(this.value, '_self', '');">
+				<option> </option>
+				<option value = "index.html">Home</option>
+				<option value = "faculty.html">Faculty</option>
+				<option value = "survey.html">Survey</option>
+				<option value = "student_grade.html">Book Selector</option>
+			</select></p>
+			</div>
+			<form>
+				Search for book here:
+				<input type = "text">
+				<br>
+				Your search returned these values:
+				<select>
+					<option>Book 1</option>
+					<option>Book 2</option>
+					<option>Book 3</option>
+				</select>
+				
+			</form>
+		</div>
+	</body>
+</html>
