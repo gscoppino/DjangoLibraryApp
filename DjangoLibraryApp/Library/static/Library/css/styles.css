@@ -1,0 +1,125 @@
+#container
+{
+	width: 800px;
+	background-color: #C5C5A8;
+	margin: 0 auto 0 auto;
+}
+#header
+{
+	border: 2px solid green;
+}
+body
+{
+	
+}
+audio
+{
+	vertical-align: auto;
+}
+#header a:hover
+{
+	background-color: green;
+	font-style: italic;
+}
+#header a:link
+{
+	color: #80a680;
+}
+#header a:visited
+{
+	color: #80b571
+}
+h1
+{
+	padding: 25px;
+	border: 5px solid green;
+	background-color: #80a680;
+	text-align: center;
+}
+#news
+{
+	width: 800px;
+	background-color: #C5C5A8;
+	margin: 0 auto 0 auto;
+}
+#news a:hover
+{
+	background-color: green;
+}
+#news a:link
+{
+	color: #80a680;
+}
+#news a:visited
+{
+	color: #80b571;
+}
+
+#books
+{
+	width: 800px;
+	background-color: #C5C5A8;
+	margin: 0 auto 0 auto;
+}
+#books a:hover
+{
+	background-color: green;
+}
+#books a:link
+{
+	color: #80a680;
+}
+#books a:visited
+{
+	color: #80b571;
+}
+#clock
+{
+	width: 800px;
+	background-color: #C5C5A8;
+	margin: 0 auto 0 auto;
+}
+
+#music
+{
+	width: 800px;
+	background-color: #C5C5A8;
+	margin: 0 auto 0 auto;
+}
+#music a:hover
+{
+	background-color: green;
+}
+#music a:link
+{
+	color: #80a680;
+}
+#music a:visited
+{
+	color: #80b571;
+}
+#music audio
+{
+	vertical-align: middle;
+}
+
+#logo
+{
+	float: right;
+}
+th.style a:visited
+{
+	color: #80b571;
+}
+th.style a:link
+{
+	color: #80a680;
+}
+th.style a:hover
+{
+	background-color: green;
+}
+
+.book {
+    display:block;
+}
