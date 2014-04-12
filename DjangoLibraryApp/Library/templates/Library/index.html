@@ -35,7 +35,7 @@
                         <option value="/library/{{ library.id }}">{{ library.name }}</option>
                     {% endfor %}
 				</select>
-                <button type="submit" onclick="window.location(document.getElementById('library_selector').value);">Go</button>
+                <button type="submit" onclick="window.location['href'] = (document.getElementById('library_selector').value);">Go</button>
 			</div>
         </div>
 		<div id = "news">

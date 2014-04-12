@@ -13,10 +13,10 @@ class IndexView(generic.ListView):
 
 class SystemBookView(generic.ListView):
     template_name = 'Library/system_books.html'
-    context_object_name = 'book'
+    context_object_name = 'book_list'
     
     def get_queryset(self):
-        return Book.objects.order_by('name')
+        return Book.objects.order_by('title')
 
 class DetailView(generic.DetailView):
     model = Library 

@@ -30,10 +30,10 @@
 			<form>
 				<br>
                 <ul>
-                {% for aBook in book.objects.all %}
+                {% for aBook in book_list.all %}
                     <li class="book">
                     <input type="checkbox"></input>
-                    <a id="book{{book.id}}" href="/book/{{book.id}}">{{book.title}}</a>
+                    <a id="book{{aBook.id}}" href="/book/{{aBook.id}}">{{aBook.title}}</a>
                     </li>
                 {% endfor %}
                 </ul>
