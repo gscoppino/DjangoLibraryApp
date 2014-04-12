@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<h1 class ="title">Library System
+			
+		</h1>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>
+			Library System
+		</title>
+	</head>
+
+	<body onload = "HandMadeClock(); setInterval('HandMadeClock()', 1000)">
+		
+		
+		
+		<div id = "container">
+			<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="img/southern-polytechnic-state-university.gif"></a>
+			<div id = "header">Menu: 
+				<a class="menu" href="index.html">Home</a> | 
+				<a class="menu" href="bookSearch.html">Book Selector</a> 
+				<br>
+			</div>
+			
+		
+		</div>
+		<div id = "books">
+			<h2><b><u>Books</u></b></h2>
+			<h4>Currently Checked Out</h4>
+			<ul>
+				<li>Book 1 <!-- Grab from DB? -->
+				<li>Book 2
+			</ul>
+			
+			<h4>Recently Checked Out</h4>
+			<ul>
+				<li>Book 3
+				<li>Book 4
+			</ul>
+		</div>
+		
+	
+	<script type = "text/javascript">
+		function HandMadeClock()
+		{
+			/* Clock To Do List
+			*  ----------------------
+			* Get current time, then add to it
+			* Display time and date at bottom of screen
+			*/
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			
+			minutes = ( minutes < 10 ? "0" : "" ) + minutes;
+			seconds = ( seconds < 10 ? "0" : "" ) + seconds;
+			
+			var timeOfDay = ( hours < 12 ) ? "AM" : "PM";
+			hours = ( hours > 12 ) ? hours - 12 : hours;
+			hours = ( hours == 0 ) ? 12 : hours;
+			
+			var currentTimeString = hours + ":" + minutes + ":" + seconds + " " + timeOfDay;
+			document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+			
+		}
+	
+		
+	</script>
+	<br>
+	<div id = "clock">
+	
+	<span id="clock">&nbsp;</span>
+	</div>
+	</body>
+	
+</html>
