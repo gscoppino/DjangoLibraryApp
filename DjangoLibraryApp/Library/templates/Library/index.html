@@ -32,15 +32,15 @@
             <div id="header"> 
                 <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
                 <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
-                <a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> |
+                <a class="menu" href="{% url 'Library:login' %}" title="Login to check out and return books.">Login</a> |
                 <a class="menu" href="survey.html">About</a> 
             </div>
             <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
             <div id="description">	
                 <p><em>Welcome, [user or guest]. </em></p>
                 <p>Choose a library from the drop-down menu to browse its available books.</p> 
-                <p>Have an existing account? <a href="faculty.html">Login</a> to begin checking out books.</p>
-                <p>New to Library System? <a href="faculty.html">Create an account</a> to get started!</p>
+                <p>Have an existing account? <a href="{% url 'Library:login' %}">Login</a> to begin checking out books.</p>
+                <p>New to Library System? <a href="{% url 'Library:login' %}">Create an account</a> to get started!</p>
             </div>
             <select id="library_selector"> 
                 <option></option>

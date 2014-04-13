@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.contrib.auth.models import User
+from django.contrib.auth.admin import UserAdmin
 
 # Model imports
 from Library.models import Library, Shelf, Book
@@ -22,6 +24,9 @@ class BookInline(admin.TabularInline):
     def has_add_permission(self, request):
         return False
 
+class UserAdmin(admin.ModelAdmin):
+    inlines = [BookInline]
+ 
 class LibraryAdmin(admin.ModelAdmin):
     list_display = ('name', 'shelves', 'max_shelves', 'books', 'max_books')
     search_fields = ['name']
@@ -55,11 +60,13 @@ class BookAdmin(admin.ModelAdmin):
     list_filter =   ['author', 'publisher', 'genre', 'language', 'checkout_status']
     search_fields = ['title', 'author', 'publisher']
     fieldsets = [
-        ('Inventory', {'fields': ['shelf', 'condition']}),
+        ('Inventory', {'fields': ['shelf', 'checkout_client', 'condition']}),
         ('Basic Information', {'fields': ['title', 'author', 'isbn']}),
         ('Details', {'fields': ['publisher', 'pub_date', 'genre', 'language']}),
     ]    
 
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)
 admin.site.register(Library,LibraryAdmin)
 admin.site.register(Shelf, ShelfAdmin)
 admin.site.register(Book, BookAdmin)

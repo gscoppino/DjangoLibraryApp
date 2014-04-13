@@ -31,7 +31,7 @@ A Testament of Youth, Brittain Vera, 1933, A Testament of Youth, The Queue, 7564
 A Thousand Cranes, Kawabata Yasunari, 1952, A Thousand Cranes, Kalmbach Publishing, 8204971533, 643-2277500473, V1CRWMF80Y
 A Town Like Alice, Shute Nevil, 1950, A Town Like Alice, Tarpaulin Sky Press, 3103824464, 565-0099237827, O0BVA87MYU
 A Voi/Avoid, Perec Georges, 1969, A Voi/Avoid, BorderStone Press, 3945548838, 134-9262293452, D6STO9R6H2
-A Woman's Life, Maupassant Guy de, 1883, A Woman's Life, Urban Books, 3014727061, 110-5618895781, 0LTSX15YH5
+A Woman's Life, Maupassant Guy de, 18.83, A Woman's Life, Urban Books, 3014727061, 110-5618895781, 0LTSX15YH5
 A World for Julius, Echenique Alfredo Bryce, 1970, A World for Julius, Purple House Press, 1264764299, 910-9954776394, NE44F1XG9Q
 Absalom Absalom!, Faulkner William, 1936, Absalom Absalom!, Baen Ebooks, 5237738457, 927-6613305008, JZNV8VCT31
 Absolute Beginners, MacInnes Colin, 1959, Absolute Beginners, Oyster River Press, 5599449747, 792-4813547611, N6M5LICS9Z
@@ -151,7 +151,7 @@ Confederacy of Dunces, Kennedy Toole John, 1980, Confederacy of Dunces, Velocity
 Confessions, Rousseau Jean-Jacques, 1782, Confessions, Eio Books, 6115888336, 992-7877780351, WC1LS1E6AQ
 Contact, Sagan Carl, 1985, Contact, Griffin Publishing Company, 1506806697, 514-1910638055, A6OLTDLUH8
 Correction, Bernhard Thomas, 1975, Correction, GraphicAudio, 9721747906, 521-5004202469, O9A834A8LX
-Couples, Passerby Strauss Botho, 1981, Couples, Passerby, Threshold Editions, 2782761722, 551-3856663461, DJDX1GFNJM
+Couples, Passerby, Strauss Botho, 1981, Couples, Passerby, Threshold Editions, 2782761722, 551-3856663461, DJDX1GFNJM
 Cranford, Gaskell Elizabeth, 1853, Cranford, Orb Books, 8321441629, 115-3637165234, MSA6C8PV1S
 Crash, Ballard JG, 1973, Crash, Kessinger Publishing, 9523127314, 181-8372673831, 9Y6A54NTL6
 Crime and Punishment, Dostoevsky Fyodor, 1866, Crime and Punishment, Donald M. Grant, Publisher, 8821040203, 442-4915163987, 927W64KU69
@@ -201,7 +201,7 @@ Elective Affinities, Goethe Johann, 1809, Elective Affinities, Word Works, 31048
 Elementary Particles, Houellbecq Michel, 1998, Elementary Particles, Telos (journal), 5751663163, 051-5162315614, RJ9B76ZHQS
 Eline Vere, Couperus Louis, 1889, Eline Vere, Dutton Penguin, 4833660070, 820-9790284432, GZO9PTGE0J
 Embers, M rai S ndor, 1942, Embers, Poetry.com, 0234362083, 226-7696720211, J0RWUIQY5J
-Emile Or On Education, Roussean Jean-Jacques, 1762, Emile, Or, On Education, Eakins Press, 6717534336, 653-1524242958, VLSXFY4E94
+Emile, Or, On Education, Roussean Jean-Jacques, 1762, Emile, Or, On Education, Eakins Press, 6717534336, 653-1524242958, VLSXFY4E94
 Emma, Austen Jane, 1816, Emma, Griffin Publishing Company, 4158005382, 556-1196203214, VTOLQ1DQZN
 Enduring Love, McEwan Ian, 1997, Enduring Love, A. A. Wyn's Magazine Publishers, 0689216834, 985-8607019865, 2H7XB72CBB
 Enigma of Arrival, Naipaul VS, 1987, Enigma of Arrival, Thurman Publishing, 8130431973, 355-9733193957, UQN5JXAT4H
@@ -245,8 +245,8 @@ Franny and Zooey, Salinger JD, 1961, Franny and Zooey, Collier Books, 9255963355
 Froth on the Daydream, Vian Boris, 1947, Froth on the Daydream, Vel‡zquez Press, 6101766949, 511-4340146934, VDEMMAPP57
 Fugitive Pieces, Michaels Ann, 1996, Fugitive Pieces, Gareth Stevens, 0320952110, 379-9787041032, CZAT3BP6AQ
 G, Berger John, 1972, G, Gallaudet University Press, 8186366962, 748-1244396242, YHM7NFNFV6
-Gabriela Clove and Cinnamon, Amado Jorge, 1958, Gabriela Clove and Cinnamon, Lost Roads Publishers, 0663671121, 483-2049633280, EO506533J4
-Garden Ashes, Kis Danilo, 1965, Garden, Ashes, Dutton Penguin, 2083665868, 287-8556150777, AD3LRRAFL9
+Gabriela, Clove and Cinnamon, Amado Jorge, 1958, Gabriela, Clove and Cinnamon, Lost Roads Publishers, 0663671121, 483-2049633280, EO506533J4
+Garden, Ashes, Kis Danilo, 1965, Garden, Ashes, Dutton Penguin, 2083665868, 287-8556150777, AD3LRRAFL9
 Gargantua and Pantagruel, Rabelais Francois, 1564, Gargantua and Pantagruel, Ludwig von Mises Institute, 4531383651, 859-6203496388, P2YXAGZZA4
 Germinal, Zola Emile, 1885, Germinal, B&R Samizdat Express, 8280833725, 680-0298034896, NTJ1WFN764
 Get Shorty, Leonard Elmore, 1990, Get Shorty, Poetry.com, 4300617031, 028-4744462133, QLM5SRBQAI
@@ -278,7 +278,7 @@ Heart of Darkness, Conrad Joseph, 1902, Heart of Darkness, The Bookhouse for Chi
 Heartbreak Tango, Manuel Puig, 1969, Heartbreak Tango, Mycroft & Moran, 5946293792, 468-6823189624, VVM8JERM6N
 Henry Von Ofterdingen (unfinished), Novalis, 1802, Henry Von Ofterdingen (unfinished), American Book Company (1996), 2750115134, 487-1161925846, IU51AXE28D
 Her Privates We, Manning Frederic, 1930, Her Privates We, Bilingual Review Press, 9836301845, 645-0979548293, 7U817J922O
-Here's to You Jesusa!, Poniatowska Elena, 1969, Here's to You, Jesusa!ØØ, Per Aspera Press, 9664636902, 424-4890680077, VDK6SYFWX5
+Here's to You, Jesusa!ØØ, Poniatowska Elena, 1969, Here's to You, Jesusa!ØØ, Per Aspera Press, 9664636902, 424-4890680077, VDK6SYFWX5
 Herzog, Bellow Saul, 1964, Herzog, National Poetry Foundation, 6004477428, 515-7932594714, GUCF5QFCI4
 Hideous Kinky, Freud Esther, 1992, Hideous Kinky, Dilettante Press, 0953246283, 555-9980357738, L0ITHG6VZS
 History of the Seige of Lisbon, Saramago Jose, 1989, History of the Seige of Lisbon, Donald M. Grant, Publisher, 6199306446, 379-0822586870, 8W37EGH7U0
@@ -287,7 +287,7 @@ Home and the World, Tagore Rabindranath, 1916, Home and the World, ISFiC Press, 
 Homo Faber, Frisch Max, 1957, Homo Faber, Fairwood Press, 4373555383, 657-2080160282, A8SLXA92W8
 Hound of the Baskervilles, Doyle Arthur Conan, 1902, Hound of the Baskervilles, National Academies Press, 6979109794, 136-5221948275, MMN101OXD9
 House Mother Normal, Johnson BS, 1971, House Mother Normal, The Chivalry Bookshelf, 9596760144, 447-2589188209, 4FI5P8OFYO
-How Late it Was How Late, Kelman James, 1994, How Late it Was How Late, Meredith Publishing Company, 5987450202, 206-5380892364, U4Z707L71N
+How Late it Was, How Late, Kelman James, 1994, How Late it Was, How Late, Meredith Publishing Company, 5987450202, 206-5380892364, U4Z707L71N
 Howards End, Forster EM, 1910, Howards End, Quinto Sol, 5030639663, 783-4616283670, IUOBM8Q9HP
 Humboldt's Gift, Bellow Saul, 1975, Humboldt's Gift, Visible Ink Press, 6338485561, 480-4258615785, TCHW44W82Y
 Humphry Clinker, Smollett Tobias George, 1771, Humphry Clinker, Jewish Lights Publishing, 4295071147, 672-8163050372, ZT6K96TI3P
@@ -298,7 +298,7 @@ I Robot, Asimov Isaac, 1950, I Robot, AmazonEncore, 4388202820, 442-5324576948, 
 I Thought of Daisy, Wilson Edmund, 1929, I Thought of Daisy, Glorian Publishing, 4174645805, 257-2132430454, BSQ95EA7SU
 I'm Not Scared, Ammaniti Niccolo, 2001, I'm Not Scared, Poseidon Press, 4374929233, 290-2732753598, N3I1I83LZR
 I'm Not Stiller, Frisch Max, 1954, I'm Not Stiller, Ramble House, 4607223641, 878-0707203018, L8M5NM3KCY
-If Not Now When?, Levi Primo, 1982, If Not Now When?, Per Aspera Press, 2493953092, 706-5479385063, 2GOB14HPZ2
+If Not Now, When?, Levi Primo, 1982, If Not Now, When?, Per Aspera Press, 2493953092, 706-5479385063, 2GOB14HPZ2
 If on a Winter's Night a Traveler, Calvino Italo, 1979, If on a Winter's Night a Traveler, National Poetry Foundation, 1439887776, 576-9800038591, SI3QS8PMFT
 If this is a Man, Levi Primo, 1947, If this is a Man, Delirium Books, 9231023087, 875-4940561086, EE0F2RKE3L
 Impressions of Africa, Roussel Raymond, 1910, Impressions of Africa, DeVore & Sons Inc., 7989606945, 877-7425174153, LVPK2IL3KS
@@ -335,7 +335,7 @@ Journey to Alcarria, Cela Camilo Jos‚, 1948, Journey to Alcarria, Blue Ribbon 
 Journey to the Centre of the Earth, Verne Jules, 1866, Journey to the Centre of the Earth, The Chivalry Bookshelf, 6752197327, 661-0815938365, C3FF4ARSQ0
 Journey to the End of the Night, Celine Louis Ferdinand, 1932, Journey to the End of the Night, E. P. Dutton, 1746263381, 368-5022212091, 5EL1H6N4SB
 Jude the Obscure, Hardy Thomas, 1895, Jude the Obscure, South Dakota State Historical Society Press, 0294389068, 439-0847438967, SK6DWTFN2Q
-Julie; or the New Eloise, Rousseau Jean-Jacques, 1760, Julie; or the New Eloise, Whitman Publishing, 6618756977, 096-2911013461, 4405RMEGMK
+Julie; or, the New Eloise, Rousseau Jean-Jacques, 1760, Julie; or, the New Eloise, Whitman Publishing, 6618756977, 096-2911013461, 4405RMEGMK
 July's People, Gordimer Nadine, 1981, July's People, Villard (imprint), 1376175247, 652-3038773964, 6RUJY3H8YM
 Junkie, Burroughs William, 1953, Junkie, Spineless books, 3131976774, 157-6809264103, EOT0LX7QAH
 Justine, Sade Marquis de, 1791, Justine, Dolphin-Moon Press, 8143351909, 752-0088989446, 2PS81ZJ3FF
@@ -376,7 +376,7 @@ Locus Solus, Roussel Raymond, 1914, Locus Solus, Ludwig von Mises Institute, 470
 Lolita, Nabokov Vladimir, 1955, Lolita, Quinto Sol, 9118879540, 075-7815364584, TSVFM6PJHJ
 London Fields, Amis Martin, 1989, London Fields, Alice James Books, 3506108856, 917-9259297100, N5IIX11BZ8
 Lonely Londoners, Selvon Sam, 1956, Lonely Londoners, A Beka Book, 5445301800, 916-2862550692, MS224UX4V6
-Look Homeward Angel, Wolf Thomas, 1929, Look Homeward Angel, Merriam-Webster, 6814234261, 763-7825950491, S99B7N9QTF
+Look Homeward, Angel, Wolf Thomas, 1929, Look Homeward, Angel, Merriam-Webster, 6814234261, 763-7825950491, S99B7N9QTF
 Looking for the Possible Dance, Kennedy AL, 1993, Looking for the Possible Dance, DinŽ College Press, 8543737607, 637-5599768918, J6KDFDERSC
 Lord of the Flies, Golding William, 1954, Lord of the Flies, Jewish Lights Publishing, 5658955547, 883-3087998593, F5O7E45P6W
 Lost Honour of Katharina Blum, Boll Heinrich, 1974, Lost Honour of Katharina Blum, BorderStone Press, 7088185672, 593-2291186132, A35NMRCZHP
@@ -469,7 +469,7 @@ On the Heights of Despair, Cioran Emile (Emil), 1934, On the Heights of Despair,
 On the Road, Kerouac Jack, 1957, On the Road, Regnery Publishing, 8808850969, 682-4730703321, VJUFZ2434A
 One Day in the Life of Ivan Denisovich, Solzhenitsyn Alexander, 1963, One Day in the Life of Ivan Denisovich, Wodanesdag Press, 0430956719, 555-2456740261, 5A7OD30EIN
 One Flew Over the Cuckoo's Nest, Kesey Ken, 1962, One Flew Over the Cuckoo's Nest, Georgetown University Press, 4591610546, 297-5390918366, SLBWGNZ1FO
-One None and a Hundred Thousand, Pirandello Luigi, 1926, One None and a Hundred Thousand, Hadley Rille Books, 7045305969, 037-5222545023, IIPJYOJVWN
+One, None and a Hundred Thousand, Pirandello Luigi, 1926, One, None and a Hundred Thousand, Hadley Rille Books, 7045305969, 037-5222545023, IIPJYOJVWN
 Orlando, Woolf Viginia, 1928, Orlando, Vantage Press, 6580812343, 992-4415188313, WRM0HNXQWD
 Oroonoko, Behn Aphra, 1688, Oroonoko, Oyster River Press, 5402747575, 909-6675549332, 9HEXT23TXE
 Oscar and Lucinda, Carey Peter, 1988, Oscar and Lucinda, Aladdin Paperbacks, 0769377943, 993-1881005456, OTOYS7AG1N
@@ -510,7 +510,7 @@ Quicksand, Larsen Nella, 1928, Quicksand, Tarpaulin Sky Press, 9025354342, 605-4
 Quo Vadis, Sienkiewicz Henryk, 1896, Quo Vadis, Washington Writers' Publishing House, 9136353255, 195-6340524078, OH1LLXMST0
 Rabbit is Rich, Updike John, 1981, Rabbit is Rich, Braided River (Publishing), 1114313963, 882-3863760481, HXPZO5G8WM
 Rabbit Redux, Updike John, 1971, Rabbit Redux, Thurman Publishing, 1111565250, 784-5596178160, 1GW3PBFVOF
-Rabbit Run, Updike John, 1960, Rabbit Run, Dutton Penguin, 2511364275, 017-4189256795, QM56LXSBXT
+Rabbit, Run, Updike John, 1960, Rabbit, Run, Dutton Penguin, 2511364275, 017-4189256795, QM56LXSBXT
 Ragtime, Doctorow EL, 1975, Ragtime, Arkham House, 9246748806, 771-8753460897, X4LVNM7GQ2
 Rameau's Nephew, Diderot Denis, 1805, Rameau's Nephew, Threshold Editions, 8793787023, 088-8214576325, J8OCGT2MN6
 Rashomon, Akutagawa Ryunoske, 1915, Rashomon, GraphicAudio, 6199096004, 604-9846052904, N2KH19S7R5
@@ -558,7 +558,7 @@ Sometimes a Great Notion, Kesey Ken, 1964, Sometimes a Great Notion, Crown Publi
 Song of Solomon, Morrisson Toni, 1977, Song of Solomon, Wit's End Publishing, 0525641092, 785-8254876240, 7GAF2N5QBI
 Sons and Lovers, Lawrence DH, 1913, Sons and Lovers, Southern Progress Corporation, 1060798121, 761-7768016675, I3SZ8A728U
 Southern Seas, V zquez Montalb n Manuel, 1979, Southern Seas, Harbor Mountain Press, 8739322394, 102-5776166459, J4E1H5UXOE
-Spring Flowers Spring Frost, Kadare Ismail, 2000, Spring Flowers Spring Frost, Vel‡zquez Press, 4320685948, 939-0781247886, JK6DIVEF8P
+Spring Flowers, Spring Frost, Kadare Ismail, 2000, Spring Flowers, Spring Frost, Vel‡zquez Press, 4320685948, 939-0781247886, JK6DIVEF8P
 Spring Torrents, Turgenev Ivan, 1872, Spring Torrents, American Book Company (1996), 1558682602, 697-1917900964, AP59VBCAOA
 Steppenwolf, Hesse Herman, 1927, Steppenwolf, Correspondence Publishing Committee, 2235621708, 386-1463704195, LWKOV3K5RE
 Stone Junction, Dodge Jim, 1990, Stone Junction, Galaxy Press, 3360633685, 981-2415914274, HDIIVP56QS
@@ -578,7 +578,7 @@ Tender is the Night, Fitzgerald F Scott, 1934, Tender is the Night, ƒditions Un
 Tent of Miracles, Amado Jorge, 1969, Tent of Miracles, Collier Books, 1143245817, 155-8885432728, 1NRCFBZZ2Q
 Tess of the D'Urbervilles, Hardy Thomas, 1891, Tess of the D'Urbervilles, DinŽ College Press, 2825659337, 191-0115831461, GKA8H0VHV2
 Tha‹s, France Anatole, 1890, Tha‹s, Sylvan Dell Publishing, 0115609554, 591-5940931773, G5V58KGKDP
-Thank You Jeeves, Wodehouse PG, 1934, Thank You Jeeves, Caxton Press (United States), 5053103749, 444-8460997926, EJIENGANCO
+Thank You, Jeeves, Wodehouse PG, 1934, Thank You, Jeeves, Caxton Press (United States), 5053103749, 444-8460997926, EJIENGANCO
 The 120 days of Sodom, Sade Marquis de, 1785, The 120 days of Sodom, Del Sol Press, 1462688707, 894-7777451815, ZS4XAH4HCL
 The 39 Steps, Buchan John, 1915, The 39 Steps, Philtrum Press, 5054860599, 119-3278644812, L9XI6VXAFM
 The Abbot C, Bataille Georges, 1950, The Abbot C, Ramble House, 5315318344, 897-6014853187, 4U150GPN23
@@ -587,6 +587,7 @@ The Adventures and Misadventures of Maqroll, Mutis µlvaro, 1993, The Adventures
 The Adventures of Caleb Williams, Godwin William, 1794, The Adventures of Caleb Williams, Mehring Books, 8533569166, 442-6519857122, ZEQCOV6LG4
 The Adventures of Peregrine Pickle, Smollett Tobias George, 1751, The Adventures of Peregrine Pickle, The Limestone Press, 7682642328, 534-6480169350, RLGDP8SEVT
 The Adventures of Sherlock Holmes, Doyle Arthur Conan, 1892, The Adventures of Sherlock Holmes, Mad Norwegian Press, 3422604751, 856-7912077590, FA5GTD47P7
+The Adventurous Simplicissimus: Being the Description of the Life of a Strange Vagabond Named Melchoir Sternfels Von Fuchshaim, Grimmelshausen Hans Jakob Christoffel von, 1668, The Adventurous Simplicissimus: Being the Description of the Life of a Strange Vagabond Named Melchoir Sternfels Von Fuchshaim, Correspondence Publishing Committee, 1014753347, 607-3701808890, 1AZF4TSH4W
 The Afternoon of a Writer, Handke Peter, 1987, The Afternoon of a Writer, Tuttle Publishing, 0467783995, 941-1751821524, PT4GFUI9KI
 The Age of Innocence, Wharton Edith, 1920, The Age of Innocence, Sylvan Dell Publishing, 7613991173, 377-6032923146, KCJU1AE25A
 The Ambassadors, James Henry, 1903, The Ambassadors, Orb Books, 1112304929, 383-1477798738, TSDOJN6N5W
@@ -831,7 +832,7 @@ The Razor's Edge, Maugham W Somerset, 1944, The Razor's Edge, Visible Ink Press,
 The Reader, Schlink Bernhard, 1995, The Reader, A Beka Book, 2424610780, 994-8037565418, YKU5FREKAN
 The Rebel, Camus Albert, 1951, The Rebel, Literary Guild, 0955964349, 515-7548864271, RVL1SB5HWT
 The Recognitions, Gaddis William, 1955, The Recognitions, Hadley Rille Books, 8786513341, 743-9018905620, NAUWAMSDK1
-The Red and the Black, Stendhal, 1831, The Red and the Black, Regnery Publishing, 9543703431, 798-6269800717, WC3SWWCBRU
+The Red and the Black,, Stendhal, 1831, The Red and the Black,, Regnery Publishing, 9543703431, 798-6269800717, WC3SWWCBRU
 The Red Room, Strindberg August, 1880, The Red Room, YIVO, 8186897357, 264-3456032587, ZU9J1L5KEF
 The Regent's Wife, Leopoldo Alas ClarÁn, 1884, The Regent's Wife, Leisure Books, 7004008806, 358-9720787519, FR7YL5O6RY
 The Reluctant Fundamentalist, Hamid Mohsin, 2006, The Reluctant Fundamentalist, Cargo Cult Press, 2512491678, 431-1673616301, 0WQH592XOK
@@ -843,7 +844,7 @@ The Roots of Heaven, Gary Romain, 1956, The Roots of Heaven, Oxmoor House, 33130
 The Scarlet Letter, Hawthorne Nathaniel, 1850, The Scarlet Letter, Collier Books, 3650426941, 641-1044104855, AHKKROFRGQ
 The Sea, Banville John, 2005, The Sea, The Social Contract Press, 1666962344, 126-1059331916, AS27LR2D3Y
 The Sea of Fertility, Mishima Yukio, 1970, The Sea of Fertility, Lighthouse Trails Publishing, 7693822038, 781-4484850992, U8R6WL4JOA
-The Sea The Sea, Murdoch Iris, 1978, The Sea The Sea, Cleis Press, 2361746354, 493-3681353892, 276H2P2U6O
+The Sea, The Sea, Murdoch Iris, 1978, The Sea, The Sea, Cleis Press, 2361746354, 493-3681353892, 276H2P2U6O
 The Secret Agent, Conrad Joseph, 1907, The Secret Agent, Harbor Mountain Press, 7500904477, 831-7613125864, S6T0KU0X21
 The Secret History, Tartt Donna, 1992, The Secret History, Tarpaulin Sky Press, 0292315968, 642-0657143119, TS8Z72OB42
 The Shadow Lines, Ghosh Amitav, 1990, The Shadow Lines, Skinner House Books, 5843741695, 523-5143163481, TD7ZZL5SB3
@@ -870,7 +871,7 @@ The Sun Also Rises, Hemmingway Ernest, 1926, The Sun Also Rises, ScholarlyEditio
 The Swarm, Schatzing Frank, 2004, The Swarm, Morgan Quitno Press, 5210875317, 408-0371101714, 8CN6S52ZZ5
 The Swimming Pool Library, Hollinghurst Alan, 1988, The Swimming Pool Library, Pacific Press Publishing Association, 8013616698, 687-7425401485, VGA6ODC32X
 The Tale of Genji, Shikibu Murasaki, 1000, The Tale of Genji, Caxton Press (United States), 3506925393, 197-6407238839, RIGFVVII35
-The Tale of the Bamboo Cutter, Kawabata Yasunari, 0900, The Tale of the Bamboo Cutter, Incunabula (publisher), 3407730304, 163-1428622817, LF4512MII7
+The Tale of the Bamboo Cutter, Kawabata Yasunari, 900, The Tale of the Bamboo Cutter, Incunabula (publisher), 3407730304, 163-1428622817, LF4512MII7
 The Talented Mr. Ripley, Highsmith Patricia, 1955, The Talented Mr. Ripley, Marick Press, 3904575319, 404-3627148399, YTQO64ZLP2
 The Talk of the Town, O'Hanlon Ardal, 1998, The Talk of the Town, Morgan Quitno Press, 2918140105, 147-2879256704, XFBSA5OBQX
 The Tartar Steppe, Buzzati Dino, 1940, The Tartar Steppe, Robert Appleton Company, 7884016538, 884-9409037642, 1JWC7F2EXE
@@ -924,7 +925,7 @@ They Shoot Horses Don't They, McCoy Horace, 1935, They Shoot Horses Don't They, 
 Thier Eyes Were Watching God, Hurston Zora Neale, 1937, Thier Eyes Were Watching God, Poisoned Pen Press, 0068603482, 378-0411324600, Q3TCXNM7JS
 Things, Perec Georges, 1965, Things, Donald M. Grant, Publisher, 0134901892, 894-2264841621, PKCK8Z12XB
 Things Fall Apart, Achebe Chinua, 1958, Things Fall Apart, Tuttle Publishing, 5681510461, 360-7100075712, ISKPKAS4QE
-This Way for the Gas Ladies and Gentlemen, Borowski Tadeusz, 1948, This Way for the Gas Ladies and Gentlemen, B&H Publishing Group, 9256275481, 912-9242301534, JA8003LFK1
+This Way for the Gas, Ladies and Gentlemen, Borowski Tadeusz, 1948, This Way for the Gas, Ladies and Gentlemen, B&H Publishing Group, 9256275481, 912-9242301534, JA8003LFK1
 Thomas of Reading, Deloney Thomas, 1599, Thomas of Reading, Donald M. Grant, Publisher, 9862719160, 385-9598104282, 2JD580J5N8
 Three Trapped Tigers, Infante Guillermo Cabrera, 1964, Three Trapped Tigers, Bess Press, 3036433110, 721-5330711777, TSQO9EINK5
 Through the Looking Glass, Carrol Lewis, 1871, Through the Looking Glass, Mycroft & Moran, 9617086684, 008-8604129515, Q1HX68QJ45
@@ -963,9 +964,9 @@ Veronika Decides to Die, Coelho Paulo, 1998, Veronika Decides to Die, ISFiC Pres
 Vertigo, Sebald WG, 1990, Vertigo, Vantage Press, 1158855645, 074-0916760569, ZOZ85VFLRH
 Viper's Tangle, Mauriac Francois, 1932, Viper's Tangle, Process Media, 9746640177, 979-2954101151, RKOAH6CVIW
 Voss, White Patrick, 1957, Voss, Albatross Publishing House, 8612833897, 910-1014613353, DUN16MQFFC
-W or the Memory of Childhood, Perec Georges, 1975, W or the Memory of Childhood, Avery Publishing, 4073026077, 774-5417460975, 3PECAWWVIC
+W, or the Memory of Childhood, Perec Georges, 1975, W, or the Memory of Childhood, Avery Publishing, 4073026077, 774-5417460975, 3PECAWWVIC
 Waiting for the Barbarians, Coetzee JM, 1980, Waiting for the Barbarians, ƒditions Underbahn, 4410209728, 104-9460141369, Z5H34IEHYI
-Waiting for the Dark Waiting for the Light, Klima Ivan, 1993, Waiting for the Dark Waiting for the Light, B&R Samizdat Express, 4066735115, 826-1190044754, X7H7DYQWKV
+Waiting for the Dark, Waiting for the Light, Klima Ivan, 1993, Waiting for the Dark, Waiting for the Light, B&R Samizdat Express, 4066735115, 826-1190044754, X7H7DYQWKV
 Walden, Thoreau Henry, 1854, Walden, McClain Printing Company, 8662253246, 877-9432198046, 4KCTGJ1RA5
 War and Peace, Tolstoy Leo, 1869, War and Peace, Correspondence Publishing Committee, 8542242731, 148-5642548558, L5B13TVQPK
 War with the Newts, Capek Karel, 1936, War with the Newts, BorderStone Press, 2315661207, 687-6777080346, 4A5RYRERV0

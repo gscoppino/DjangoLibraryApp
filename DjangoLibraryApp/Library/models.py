@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Used to handle model edge-cases
 from django.core.exceptions import ValidationError
 
@@ -58,6 +58,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=20)
     condition = models.CharField(max_length=10, blank=True)
     checkout_status = models.BooleanField(default=False)
+    checkout_client = models.ForeignKey(User, null=True, blank=True)
 
     def availability(self):
         if self.checkout_status == True:
