@@ -21,7 +21,7 @@
             {% if user.is_authenticated %}
                 <h4>Recently Checked Out Books</h4>
                 {% for book in user.book_set.all %} 
-                    <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a>
+                    <p><a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a></p>
                 {% endfor %}
             {% endif %}
 			

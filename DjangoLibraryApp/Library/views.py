@@ -37,8 +37,12 @@ class BookView(generic.DetailView):
     template_name = 'Library/book.html'
 
 def checkout(request, book_id):
-    user = User.objects.get(username=request.user)
-    checkout = Book.objects.get(id=book_id)
-    checkout.checkout_client = user 
-    checkout.checkout_status = True
-    return HttpResponse("Checking out Book %s" % book_id)  
+    try:
+        user = User.objects.get(username=request.user)
+        book = Book.objects.get(id=book_id)
+        book.checkout_client = user 
+        book.checkout_status = True
+        book.save()
+        return HttpResponse("Checking out Book %s" % book_id)  
+    except:
+        return HttpResponse("wut")
