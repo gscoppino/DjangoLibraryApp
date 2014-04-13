@@ -10,37 +10,31 @@
 	<body>
 		<div id = "news">
             <h2><b><u>New Releases</u></b></h2>
-            <ul>
                 {% for book in recent_books.all %}
-                    <p>{{book.pub_date}}: <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a></p>
+                    <p><a href="{% url 'Library:detail_book' book.id %}">{{book.title}} ({{book.pub_date.year}})</a></p>
                 {% endfor %}
-            </ul>
 		</div>
 		<div id = "books">
 			<h2><b><u>Checkout Information</u></b></h2>
 			<h4>Recently Checked Out Books</h4>
-			<ul>
                 {% for book in recently_checked_out_books %} 
                     <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a>
                 {% endfor %}
-			</ul>
 			
 			<h4>Recently Returned Books</h4>
-			<ul>
                 {% for book in recently_checked_in_books %}
                     <!--<a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</li> -->
                 {% endfor %}
-			</ul>
 		</div>
-        <div id = "clock" style="text-align:center;">
-        </div>
-        <div id="header"> 
-            <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
-            <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
-            <a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> |
-            <a class="menu" href="survey.html">About</a> 
-        </div>
 		<div id="container">
+            <div id = "clock" style="text-align:center;">
+            </div>
+            <div id="header"> 
+                <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
+                <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
+                <a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> |
+                <a class="menu" href="survey.html">About</a> 
+            </div>
             <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
             <div id="description">	
                 <p><em>Welcome, [user or guest]. </em></p>
@@ -55,6 +49,15 @@
                 {% endfor %}
             </select>
             <button id="submit_library" type="submit">Go</button>
+            <br><br> 
+            <hr> 
+            <div id="random">
+                <h2>News</h2>
+                <h3>04/2014: Launch!</h3>
+                <p>The web portal to the Library system is now active. With it, you can
+                   look through books located in libraries in our system, and, if you have a 
+                   library account, request a checkout.</p>
+            </div>
         </div>
 	
         <script type="text/javascript" src="{% static 'Library/js/index.js' %}"></script>

@@ -10,8 +10,8 @@
 	</head>
 	
 	<body>
-		<div id = "container">
-			<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="img/southern-polytechnic-state-university.gif"></a>
+		<div id ="container">
+			<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
 			<div id = "header">Menu: 
 				<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
 				<a class="menu" href="faculty.html">Faculty</a> | 
@@ -27,7 +27,7 @@
 				<option value = "survey.html">About</option>
 			</select></p>
 			</div>
-			<form>
+			<form class="form">
 				<br>
                 {% for shelf in library.shelf_set.all %}
                     <div id="shelf{{shelf.id}}">

@@ -1,6 +1,10 @@
+.title {
+    border-radius:10px;
+}
+
 #header
 {
-    width:800px;
+    width:40%;
     background-color: #C5C5A8;
     margin:auto;
     padding:10px;
@@ -8,14 +12,18 @@
     display:block;
 }
 
-#container
-{
+#container {
     height:100%;
-	width: 800px;
+}
+
+#container, #system_book_container
+{
+	width: 50%;
 	background-color: #C5C5A8;
 	margin: auto;
-    padding:10px;
+    padding:20px;
     display:block;
+    border-radius:10px 10px 10px 10px;
 }
 body
 {
@@ -38,19 +46,20 @@ body
 h1
 {
 	padding: 25px;
-	border: 5px solid green;
+	border: 3px solid green;
 	background-color: #80a680;
 	text-align: center;
 }
 #news
 {
+    border-radius:10px;
     float:left;
     display:block;
 	margin:auto;
     padding:20px;
     text-align:center;
-    height:800px;
-    width:250px;
+    height:100%;
+    width:20%;
 	background-color: #C5C5A8;
 }
 #news a:hover
@@ -69,12 +78,13 @@ h1
 #books
 {
     display:block;
+    border-radius:10px;
     float:right;
     margin:auto;
     padding:20px;
     text-align:center;
-    height:800px;
-    width:250px;
+    height:100%;
+    width:20%;
 	background-color: #C5C5A8;
 }
 #books a:hover
@@ -91,7 +101,7 @@ h1
 }
 #clock
 {
-	width: 800px;
+	width: 40%;
     display:block;
 	background-color: #C5C5A8;
 	margin: auto;
@@ -124,4 +134,8 @@ th.style a:hover
     #news, #books {
         display:none;
     }
+    #container {
+        width:70%;
+    }
 }
+
