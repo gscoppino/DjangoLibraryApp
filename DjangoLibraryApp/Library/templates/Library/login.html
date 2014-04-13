@@ -98,22 +98,21 @@
 			<a class="menu" href="survey.html">Survey</a> |
 			<a class="menu" href="{% url 'Library:detail_system' %}">Books</a>
 		<br>
-		<p>Quick Links: 
-		<select onchange = "window.open(this.value, '_self', '');">
-			<option> </option>
-			<option value = "index.html">Home</option>
-			<option value = "faculty.html">Faculty</option>
-			<option value = "survey.html">Survey</option>
-			<option value = "student_grade.html">Book Selector</option>
-		</select></p>
 		</div>
-        <form name = "loginForm" style="float:left">
-            <p>Log in here.</p>
+
+        <p>Log in here.</p>
+        {% if form.errors %}
+            <p><b>Your username and password didn't match. Please try again.</b></p>
+        {% endif %}
+        <form name = "loginForm" method="post" action="{% url 'Library:login' %}" style="float:left">
+            {% csrf_token %}
             <br>
-            User name: <input type="text" name="uName"><br>
-            Password: <input type="text" name="uPass"><br>
+            User name: {{form.username}}<br>
+            Password: {{form.password}}<br>
+            <input type="submit" value="Login"/> 
+            <input type="hidden" name="next" value="{{ next }}"/>
         </form>
-		<form name = "signupForm" style="float:right">
+		<form name="signupForm" style="float:right">
             <p>Don't have an account? Sign up today!</p>
 			<br>
 			First name: <input type ="text" name ="fnameTB"><br>

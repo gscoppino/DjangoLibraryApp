@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
@@ -16,9 +17,6 @@ class IndexView(generic.ListView):
         context['recently_checked_in_books'] = Book.objects.filter(checkout_status=False)
         context['recent_books'] = Book.objects.order_by('pub_date').reverse()[:5]
         return context
-
-class LoginView(generic.TemplateView):
-    template_name = 'Library/login.html'
 
 class SystemBookView(generic.ListView):
     template_name = 'Library/system_books.html'
