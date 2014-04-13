@@ -1,0 +1,30 @@
+<html>
+	<head>
+        {% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'Library/css/styles.css' %}" />
+		<h1>Library System</h1>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>
+			Library System
+		</title>
+	</head>
+	<br>
+	<body>
+        <div id = "container">
+            <a HREF = "http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
+            <div id="header">Menu: 
+                <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
+                <a class="menu" href="{% url 'Library:about' %}">About</a> | 
+                <a class="menu" href="{% url 'Library:login' %}">Login</a> |
+                <a class="menu" href="{% url 'Library:detail_system' %}">Books</a>
+            </div>
+            <br><br><br>
+            <h2><b>About the Library System</b></h2>
+            <p>
+               The Library Web System meets the needs of library administrators and clients alike, providing 
+               the ability to manipulate a database of books, shelves, libraries, and users representing 
+               the corresponding real work information.
+            </p>
+        </div>
+	</body>
+</html>

@@ -11,15 +11,19 @@
 		<div id = "news">
             <h2><b><u>New Releases</u></b></h2>
                 {% for book in recent_books.all %}
-                    <p><a href="{% url 'Library:detail_book' book.id %}">{{book.title}} ({{book.pub_date.year}})</a></p>
+                    <p>
+                    <a href="{% url 'Library:detail_book' book.id %}">{{book.title}} ({{book.pub_date.year}})</a>
+                    </p>
                 {% endfor %}
 		</div>
 		<div id = "books">
 			<h2><b><u>Checkout Information</u></b></h2>
-			<h4>Recently Checked Out Books</h4>
+            {% if user.is_authenticated %}
+                <h4>Recently Checked Out Books</h4>
                 {% for book in recently_checked_out_books %} 
                     <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a>
                 {% endfor %}
+            {% endif %}
 			
 			<h4>Recently Returned Books</h4>
                 {% for book in recently_checked_in_books %}
@@ -32,8 +36,8 @@
             <div id="header"> 
                 <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
                 <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
-                <a class="menu" href="{% url 'Library:login' %}" title="Login to check out and return books.">Login</a> |
-                <a class="menu" href="survey.html">About</a> 
+                <a class="menu" href="{% url 'Library:login' %}" title="Login to check in/out books.">Login</a> |
+                <a class="menu" href="{% url 'Library:about' %}">About</a> 
             </div>
             <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
             <div id="description">	

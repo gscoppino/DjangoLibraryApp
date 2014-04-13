@@ -18,6 +18,9 @@ class IndexView(generic.ListView):
         context['recent_books'] = Book.objects.order_by('pub_date').reverse()[:5]
         return context
 
+class AboutView(generic.TemplateView):
+    template_name = 'Library/about.html'
+
 class SystemBookView(generic.ListView):
     template_name = 'Library/system_books.html'
     context_object_name = 'book_list'

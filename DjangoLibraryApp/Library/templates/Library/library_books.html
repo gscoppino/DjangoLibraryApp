@@ -15,7 +15,7 @@
 			<div id = "header">Menu: 
 				<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
 				<a class="menu" href="{% url 'Library:login' %}">Login</a> | 
-				<a class="menu" href="survey.html">Survey</a> |
+				<a class="menu" href="{% url 'Library:about' %}">About</a> |
 				<a class="menu" href="{% url 'Library:detail_system' %}">Books</a>
 			<br>
 			<p>Quick Links: 
@@ -35,14 +35,14 @@
                         <ul>
                             {% for book in shelf.book_set.all %}
                                 <li class="book">
-                                <input type="checkbox"></input>
+                                <input type="checkbox" value="{{book.id}}"/>
                                 <a id="book{{book.id}}" href="/book/{{book.id}}">{{book.title}}</a>
                                 </li>
                             {% endfor %}
                         </ul>
                     </div>
                 {% endfor %}
-				<button>Submit</button>
+				<input type="submit" value="Submit"/>
 			</form>
 		</div>
 	</body>
