@@ -7,40 +7,15 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'Library/css/styles.css' %}" />
 	</head>
 
-	<body onload = "Clock(); setInterval('Clock()', 1000)">
-        <div id = "clock" style="text-align:center;">
-            <span id="clock"></span>
-        </div>
-        <div id="header"> 
-            <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
-            <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
-            <a class="menu" href="survey.html">Survey</a> |
-            <a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> 
-        </div>
-		<div id="container">
-            <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
-            <div id="description">	
-                <h2><u><strong>Description</strong></u></h2>
-                <p><em>Welcome, [user or guest]. </em></p>
-                <p>Choose a library from the drop-down menu to browse its available books.</p> 
-            </div>
-            <select id="library_selector"> 
-                <option></option>
-                {% for library in library_list.all %}
-                    <option value="/library/{{ library.id }}">{{ library.name }}</option>
-                {% endfor %}
-            </select>
-            <button type="submit" onclick="window.location['href'] = (document.getElementById('library_selector').value);">Go</button>
-        </div>
+	<body>
 		<div id = "news">
-            <h2><b><u>New Book Releases</u></b></h2>
+            <h2><b><u>New Releases</u></b></h2>
             <ul>
                 {% for book in recent_books.all %}
                     <p>{{book.pub_date}}: <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a></p>
                 {% endfor %}
             </ul>
 		</div>
-		
 		<div id = "books">
 			<h2><b><u>Checkout Information</u></b></h2>
 			<h4>Recently Checked Out Books</h4>
@@ -57,34 +32,31 @@
                 {% endfor %}
 			</ul>
 		</div>
-		
+        <div id = "clock" style="text-align:center;">
+        </div>
+        <div id="header"> 
+            <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
+            <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
+            <a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> |
+            <a class="menu" href="survey.html">About</a> 
+        </div>
+		<div id="container">
+            <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
+            <div id="description">	
+                <p><em>Welcome, [user or guest]. </em></p>
+                <p>Choose a library from the drop-down menu to browse its available books.</p> 
+                <p>Have an existing account? <a href="faculty.html">Login</a> to begin checking out books.</p>
+                <p>New to Library System? <a href="faculty.html">Create an account</a> to get started!</p>
+            </div>
+            <select id="library_selector"> 
+                <option></option>
+                {% for library in library_list.all %}
+                    <option value="/library/{{ library.id }}">{{ library.name }}</option>
+                {% endfor %}
+            </select>
+            <button id="submit_library" type="submit">Go</button>
+        </div>
 	
-        <script type = "text/javascript">
-            function Clock()
-            {
-                /* Clock To Do List
-                *  ----------------------
-                * Get current time, then add to it
-                * Display time and date at bottom of screen
-                */
-                var now = new Date();
-                var hours = now.getHours();
-                var minutes = now.getMinutes();
-                var seconds = now.getSeconds();
-                
-                minutes = ( minutes < 10 ? "0" : "" ) + minutes;
-                seconds = ( seconds < 10 ? "0" : "" ) + seconds;
-                
-                var timeOfDay = ( hours < 12 ) ? "AM" : "PM";
-                hours = ( hours > 12 ) ? hours - 12 : hours;
-                hours = ( hours == 0 ) ? 12 : hours;
-                
-                var currentTimeString = hours + ":" + minutes + ":" + seconds + " " + timeOfDay;
-                document.getElementById("clock").firstChild.nodeValue = currentTimeString;
-                
-            }
-        </script>
-
-
+        <script type="text/javascript" src="{% static 'Library/js/index.js' %}"></script>
 	</body>
 </html>
