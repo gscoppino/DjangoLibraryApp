@@ -1,12 +1,18 @@
+#header
+{
+    width:800px;
+    background-color: #C5C5A8;
+    margin:auto;
+    padding:10px;
+    text-align:center;
+}
+
 #container
 {
 	width: 800px;
 	background-color: #C5C5A8;
-	margin: 0 auto 0 auto;
-}
-#header
-{
-	border: 2px solid green;
+	margin: auto;
+    padding:10px;
 }
 body
 {
@@ -38,9 +44,12 @@ h1
 }
 #news
 {
-	width: 800px;
+    float:left;
+	margin:auto;
+    padding:20px;
+    text-align:center;
+    height:800px;
 	background-color: #C5C5A8;
-	margin: 0 auto 0 auto;
 }
 #news a:hover
 {
@@ -57,9 +66,12 @@ h1
 
 #books
 {
-	width: 800px;
+    float:right;
+    margin:auto;
+    padding:20px;
+    text-align:center;
+    height:800px;
 	background-color: #C5C5A8;
-	margin: 0 auto 0 auto;
 }
 #books a:hover
 {
@@ -77,30 +89,9 @@ h1
 {
 	width: 800px;
 	background-color: #C5C5A8;
-	margin: 0 auto 0 auto;
-}
-
-#music
-{
-	width: 800px;
-	background-color: #C5C5A8;
-	margin: 0 auto 0 auto;
-}
-#music a:hover
-{
-	background-color: green;
-}
-#music a:link
-{
-	color: #80a680;
-}
-#music a:visited
-{
-	color: #80b571;
-}
-#music audio
-{
-	vertical-align: middle;
+	margin: auto;
+    padding:10px;
+    text-align:center;
 }
 
 #logo

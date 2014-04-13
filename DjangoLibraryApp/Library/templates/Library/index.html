@@ -8,57 +8,53 @@
 	</head>
 
 	<body onload = "Clock(); setInterval('Clock()', 1000)">
-		<div id = "container">
-
-            <div id = "clock" style="text-align:center;">
-                <span id="clock"></span>
+        <div id = "clock" style="text-align:center;">
+            <span id="clock"></span>
+        </div>
+        <div id="header"> 
+            <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
+            <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
+            <a class="menu" href="survey.html">Survey</a> |
+            <a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> 
+        </div>
+		<div id="container">
+            <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
+            <div id="description">	
+                <h2><u><strong>Description</strong></u></h2>
+                <p><em>Welcome, [user or guest]. </em></p>
+                <p>Choose a library from the drop-down menu to browse its available books.</p> 
             </div>
-
-			<a href="http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
-
-			<div id = "header"> 
-				<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
-				<a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books in the library system.">Books</a> | 
-				<a class="menu" href="survey.html">Survey</a> |
-				<a class="menu" href="faculty.html" title="Login to check out and return books.">Login</a> 
-			
-                <div id="description">	
-                    <h2><u><strong>Description</strong></u></h2>
-                    <p><em>Welcome, [user or guest]. </em></p>
-
-                    <p>Choose a library from the drop-down menu to browse its available books.</p> 
-                </div>
-
-				<select id="library_selector"> 
-					<option></option>
-                    {% for library in library_list.all %}
-                        <option value="/library/{{ library.id }}">{{ library.name }}</option>
-                    {% endfor %}
-				</select>
-                <button type="submit" onclick="window.location['href'] = (document.getElementById('library_selector').value);">Go</button>
-			</div>
+            <select id="library_selector"> 
+                <option></option>
+                {% for library in library_list.all %}
+                    <option value="/library/{{ library.id }}">{{ library.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" onclick="window.location['href'] = (document.getElementById('library_selector').value);">Go</button>
         </div>
 		<div id = "news">
-            <h2><b><u>News</u></b></h2>
+            <h2><b><u>New Book Releases</u></b></h2>
             <ul>
-                <li><a class = "news_item" href = "http://imgur.com/eFiEr2P">"Thousands killed in tabling accident."</a>
-                <li><a class = "news_item" href = "http://i.imgur.com/cLMG6fr.jpg">"Cows. Smarter than humans?"</a>
-                <li><a class = "news_item" href = "http://i.imgur.com/QHaG2yC.jpg">"This guy learned one easy trick to overcome disease through willpower.  Cancer doctors hate him!"</a>
+                {% for book in recent_books.all %}
+                    <p>{{book.pub_date}}: <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a></p>
+                {% endfor %}
             </ul>
 		</div>
 		
 		<div id = "books">
-			<h2><b><u>Books</u></b></h2>
-			<h4>Currently Checked Out</h4>
+			<h2><b><u>Checkout Information</u></b></h2>
+			<h4>Recently Checked Out Books</h4>
 			<ul>
-				<li>Book 1 <!-- Grab from DB? Hell Yea.-->
-				<li>Book 2
+                {% for book in recently_checked_out_books %} 
+                    <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a>
+                {% endfor %}
 			</ul>
 			
-			<h4>Recently Checked Out</h4>
+			<h4>Recently Returned Books</h4>
 			<ul>
-				<li>Book 3</li>
-				<li>Book 4</li>
+                {% for book in recently_checked_in_books %}
+                    <!--<a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</li> -->
+                {% endfor %}
 			</ul>
 		</div>
 		
