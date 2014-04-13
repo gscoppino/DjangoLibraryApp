@@ -36,7 +36,11 @@
             <div id="header"> 
                 <a class="menu" href="{% url 'Library:index' %}">Home</a> | 
                 <a class="menu" href="{% url 'Library:detail_system' %}" title="Browse all books.">Books</a> | 
+                {% if user.is_authenticated %}
+                <a class="menu" href="{% url 'Library:logout' %}" title="Logout when ready.">Logout</a> |
+                {% else %}
                 <a class="menu" href="{% url 'Library:login' %}" title="Login to check in/out books.">Login</a> |
+                {% endif %}
                 <a class="menu" href="{% url 'Library:about' %}">About</a> 
             </div>
             <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
