@@ -37,7 +37,11 @@
             </div>
             <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
             <div id="description">	
-                <p><em>Welcome, [user or guest]. </em></p>
+                {% if user.is_authenticated %}
+                    <p><em>Welcome back,{{user.username}}.</em></p>
+                {% else %}
+                    <p><em>Welcome, guest. </em></p>
+                {% endif %} 
                 <p>Choose a library from the drop-down menu to browse its available books.</p> 
                 <p>Have an existing account? <a href="{% url 'Library:login' %}">Login</a> to begin checking out books.</p>
                 <p>New to Library System? <a href="{% url 'Library:login' %}">Create an account</a> to get started!</p>

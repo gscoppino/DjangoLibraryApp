@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="styles.css" />
+        {% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'Library/css/styles.css' %}" />
 		<h1>Library System</h1>
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 		<title>
@@ -10,7 +11,7 @@
 	<br>
 	<body>
 	<div id = "container">
-		<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="img/southern-polytechnic-state-university.gif"></a>
+		<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
 		<div id = "header">Menu: 
 			<a class="menu" href="index.html">Home</a> | 
 			<a class="menu" href="faculty.html">Faculty</a> | 
