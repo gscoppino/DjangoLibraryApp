@@ -20,7 +20,7 @@
 			<h2><b><u>Checkout Information</u></b></h2>
             {% if user.is_authenticated %}
                 <h4>Recently Checked Out Books</h4>
-                {% for book in recently_checked_out_books %} 
+                {% for book in user.book_set.all %} 
                     <a href="{% url 'Library:detail_book' book.id %}">{{book.title}}</a>
                 {% endfor %}
             {% endif %}
@@ -42,7 +42,7 @@
             <a href="http://spsu.edu"><IMG id ="logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
             <div id="description">	
                 {% if user.is_authenticated %}
-                    <p><em>Welcome back,{{user.username}}.</em></p>
+                    <p><em>Welcome back, {{user.username}}.</em></p>
                 {% else %}
                     <p><em>Welcome, guest. </em></p>
                 {% endif %} 

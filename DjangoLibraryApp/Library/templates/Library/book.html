@@ -19,12 +19,21 @@
                 <a class="menu" href="{% url 'Library:detail_system' %}">Books</a>
             </div>
             <br><br><br>
-            <h2><b>About the Library System</b></h2>
+            <h2><b>{{book.title}}</b></h2>
             <p>
-               The Library Web System meets the needs of library administrators and clients alike, providing 
-               the ability to manipulate a database of books, shelves, libraries, and users representing 
-               the corresponding real work information.
+                <p><b>Author: </b>{{book.author}}</p>
+                <p><b>Publisher: </b>{{book.publisher}}</p>
+                <p><b>Publish Date: </b>{{book.pub_date}}</p>
+                <p><b>ISBN: </b>{{book.isbn}}</p>
+                <p><b>Condition: </b>{{book.condition}}</p>
+                <p><b>Checkout Status: </b>{{book.checkout_status}}</p>
             </p>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'Library:checkout' book.id %}">
+                    {% csrf_token %} 
+                    <input type="submit" value="Checkout"/>
+                </form>
+            {% endif %}
         </div>
 	</body>
 </html>

@@ -12,30 +12,22 @@
 	<body>
 		<div id ="container">
 			<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
-			<div id = "header">Menu: 
+			<div id = "header"> 
 				<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
 				<a class="menu" href="{% url 'Library:login' %}">Login</a> | 
 				<a class="menu" href="{% url 'Library:about' %}">About</a> |
 				<a class="menu" href="{% url 'Library:detail_system' %}">Books</a>
 			<br>
-			<p>Quick Links: 
-			<select onchange="window.open(this.value, '_self', '');">
-				<option> </option>
-				<option value = "index.html">Home</option>
-				<option value = "faculty.html">Faculty</option>
-				<option value = "student_grade.html">Books</option>
-				<option value = "survey.html">About</option>
-			</select></p>
 			</div>
-			<form class="form">
-				<br>
+		    <br>
+			<form class="form" method="post" action="">
                 {% for shelf in library.shelf_set.all %}
                     <div id="shelf{{shelf.id}}">
                         <h2>{{shelf.library.name}}: Shelf {{shelf.shelf_code}}</h2>
                         <ul>
                             {% for book in shelf.book_set.all %}
                                 <li class="book">
-                                <input type="checkbox" value="{{book.id}}"/>
+                                <input type="checkbox" name="book{{book.id}}" value="{{book.id}}"/>
                                 <a id="book{{book.id}}" href="/book/{{book.id}}">{{book.title}}</a>
                                 </li>
                             {% endfor %}

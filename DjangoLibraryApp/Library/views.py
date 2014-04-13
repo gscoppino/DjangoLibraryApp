@@ -1,4 +1,4 @@
-from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
@@ -34,7 +34,11 @@ class LibraryBookView(generic.DetailView):
 
 class BookView(generic.DetailView):
     model = Book
-    template_name = 'Library/faculty.html'
+    template_name = 'Library/book.html'
 
 def checkout(request, book_id):
-    return HttpResponse("Now checking out Book %s" % book_id)  
+    user = User.objects.get(username=request.user)
+    checkout = Book.objects.get(id=book_id)
+    checkout.checkout_client = user 
+    checkout.checkout_status = True
+    return HttpResponse("Checking out Book %s" % book_id)  
