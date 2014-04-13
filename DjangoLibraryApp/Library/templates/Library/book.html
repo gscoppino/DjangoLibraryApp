@@ -31,7 +31,11 @@
             {% if user.is_authenticated %}
                 <form method="post" action="{% url 'Library:checkout' book.id %}">
                     {% csrf_token %} 
-                    <input type="submit" value="Checkout"/>
+                    {% if book.checkout_status == True %}
+                    <input type="submit" value="Return Book"/>
+                    {% else %}
+                    <input type="submit" value="Checkout Book"/>
+                    {% endif %}
                 </form>
             {% endif %}
         </div>

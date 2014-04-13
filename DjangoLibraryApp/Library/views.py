@@ -40,9 +40,13 @@ def checkout(request, book_id):
     try:
         user = User.objects.get(username=request.user)
         book = Book.objects.get(id=book_id)
-        book.checkout_client = user 
-        book.checkout_status = True
+        if (book.checkout_client == user):
+            book.checkout_client = None
+            book.checkout_status = False
+        else:
+            book.checkout_client = user 
+            book.checkout_status = True
         book.save()
-        return HttpResponse("Checking out Book %s" % book_id)  
+        return HttpResponse('Done.') 
     except:
         return HttpResponse("wut")

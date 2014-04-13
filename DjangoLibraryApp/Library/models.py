@@ -55,7 +55,7 @@ class Book(models.Model):
     language = models.CharField(max_length=25, blank=True)
     publisher = models.CharField(max_length=100)
     pub_date = models.DateField('Date published')
-    isbn = models.CharField(max_length=20)
+    isbn = models.CharField(max_length=13)
     condition = models.CharField(max_length=10, blank=True)
     checkout_status = models.BooleanField(default=False)
     checkout_client = models.ForeignKey(User, null=True, blank=True)
