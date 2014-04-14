@@ -23,6 +23,28 @@ class IndexView(generic.ListView):
 class AboutView(generic.TemplateView):
     template_name = 'Library/about.html'
 
+class SearchView(generic.ListView):
+    model = Book
+    template_name = 'Library/system_books.html'
+    context_object_name = 'book_list'
+    
+    def get_context_data(self, **kwargs):
+        context = super(SearchView, self).get_context_data(**kwargs)
+        search = self.request.POST['searchBook']
+        search_ty = self.request.POST['choice']
+        if (search_ty == 'title'):
+            book_list = Book.objects.filter(title=search)
+        elif (search_ty == 'author'):
+            book_list = Book.objects.filter(author=search)
+        elif (search_ty == 'publisher'):
+            book_list = Book.objects.filter(publisher=search)
+        elif (search_ty == 'isbn'):
+            book_list = Book.objects.filter(isbn=search)
+        else:
+            book_list = None
+        context['book_list'] = book_list
+        return context
+
 class SystemBookView(generic.ListView):
     template_name = 'Library/system_books.html'
     context_object_name = 'book_list'

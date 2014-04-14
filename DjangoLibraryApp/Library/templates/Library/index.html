@@ -49,11 +49,12 @@
                     <p><em>Welcome back, {{user.username}}.</em></p>
                 {% else %}
                     <p><em>Welcome, guest. </em></p>
+                    <p>Have an existing account? <a href="{% url 'Library:login' %}">Login</a> to begin checking out books.</p>
+                    <p>New to Library System? <a href="{% url 'Library:login' %}">Create an account</a> to get started!</p>
                 {% endif %} 
-                <p>Choose a library from the drop-down menu to browse its available books.</p> 
-                <p>Have an existing account? <a href="{% url 'Library:login' %}">Login</a> to begin checking out books.</p>
-                <p>New to Library System? <a href="{% url 'Library:login' %}">Create an account</a> to get started!</p>
             </div>
+            <br>
+            <p>You can choose a library from the drop-down menu to browse its available books.</p> 
             <select id="library_selector"> 
                 <option></option>
                 {% for library in library_list.all %}
@@ -61,6 +62,16 @@
                 {% endfor %}
             </select>
             <button id="submit_library" type="submit">Go</button>
+            <p>Or, search for a book directly in the input field below:</p>
+            <form method="post" action="{% url 'Library:search' %}">
+                {% csrf_token %}
+                <input type="text" name="searchBook" /><br>
+                <input type="radio" name="choice" value="title">Title</input>
+                <input type="radio" name="choice" value="author">Author</input>
+                <input type="radio" name="choice" value="publisher">Publisher</input>
+                <input type="radio" name="choice" value="isbn">ISBN No.</input>
+            <br><br><input type="submit" value="Search" />
+            </form>
             <br><br> 
             <hr> 
             <div id="random">
