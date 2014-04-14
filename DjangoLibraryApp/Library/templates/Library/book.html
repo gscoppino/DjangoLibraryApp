@@ -29,7 +29,7 @@
                 <p><b>Checkout Status: </b>{{book.checkout_status}}</p>
             </p>
             {% if user.is_authenticated %}
-                <form method="post" action="{% url 'Library:checkout' book.id %}">
+                <form method="post" action="{% url 'Library:checkout_or_return' book.id %}">
                     {% csrf_token %} 
                     {% if book.checkout_status == True %}
                     <input type="submit" value="Return Book"/>

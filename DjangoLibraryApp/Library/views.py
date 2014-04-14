@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views import generic
 
 from Library.models import * 
@@ -36,7 +36,7 @@ class BookView(generic.DetailView):
     model = Book
     template_name = 'Library/book.html'
 
-def checkout(request, book_id):
+def checkout_or_return(request, book_id):
     try:
         user = User.objects.get(username=request.user)
         book = Book.objects.get(id=book_id)
@@ -47,6 +47,6 @@ def checkout(request, book_id):
             book.checkout_client = user 
             book.checkout_status = True
         book.save()
-        return HttpResponse('Done.') 
+        return HttpResponseRedirect('/') 
     except:
         return HttpResponse("wut")
