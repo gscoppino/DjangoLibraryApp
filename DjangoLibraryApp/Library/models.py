@@ -68,7 +68,8 @@ class Book(models.Model):
     availability.admin_order_field = "checkout_status"
 
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=30)
+        now = timezone.now()
+        return now - datetime.timedelta(days=30) <= self.pub_date < now 
     was_published_recently.admin_order_field = "pub_date"
     was_published_recently.short_description = "Published Recently?"
     was_published_recently.boolean = True

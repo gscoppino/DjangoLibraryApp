@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.utils import timezone
 from django.views import generic
 
 from Library.models import * 
@@ -11,11 +12,12 @@ class IndexView(generic.ListView):
     context_object_name = 'home_data'
 
     def get_context_data(self, **kwargs):
+        time = timezone.now()
         context = super(IndexView, self).get_context_data(**kwargs)
         context['library_list'] = Library.objects.all()
         context['recently_checked_out_books'] = Book.objects.filter(checkout_status=True)
         context['recently_checked_in_books'] = Book.objects.filter(checkout_status=False)
-        context['recent_books'] = Book.objects.order_by('pub_date').reverse()[:5]
+        context['recent_books'] = Book.objects.filter(pub_date__lte=time).order_by('pub_date').reverse()[:5]
         return context
 
 class AboutView(generic.TemplateView):
@@ -26,7 +28,7 @@ class SystemBookView(generic.ListView):
     context_object_name = 'book_list'
     
     def get_queryset(self):
-        return Book.objects.order_by('title')
+        return Book.objects.filter(pub_date__lte=timezone.now()).order_by('title')
 
 class LibraryBookView(generic.DetailView):
     model = Library 
