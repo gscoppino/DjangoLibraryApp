@@ -91,7 +91,7 @@
 		
 	</script>
 	<div id = "container">
-		<a HREF = "http://spsu.edu"><IMG id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
+        <a HREF = "http://spsu.edu"><IMG style="float:left; margin:20px;" id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
 		<div id = "header"> 
 			<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
 			<a class="menu" href="{% url 'Library:login' %}">Login</a> | 
@@ -100,21 +100,20 @@
 		<br>
 		</div>
 
-        <p>Log in here.</p>
-        {% if form.errors %}
-            <p><b>Your username and password didn't match. Please try again.</b></p>
-        {% endif %}
         <form name = "loginForm" method="post" action="{% url 'Library:login' %}" style="float:left">
+            {% if form.errors %}
+                <p><b>Your username and password didn't match. Please try again.</b></p>
+            {% else %}
+                <p><b>Log in here.</b></p>
+            {% endif %}
             {% csrf_token %}
-            <br>
             User name: {{form.username}}<br>
             Password: {{form.password}}<br>
             <input type="submit" value="Login"/> 
             <input type="hidden" name="next" value="{{ next }}"/>
         </form>
 		<form name="signupForm" style="float:right">
-            <p>Don't have an account? Sign up today!</p>
-			<br>
+            <p><b>Don't have an account? Sign up today!</b></p>
 			First name: <input type ="text" name ="fnameTB"><br>
 			Last name: <input type = "text" name = "lnameTB"><br>
 			Major: <input type = "text" name = "majorTB"><br>
@@ -122,21 +121,9 @@
 			Sex:
 			<input type ="radio" name = "maleR">Male
 			<input type ="radio" name = "femaleR">Female<br>
-			<br><u>Highest education completed</u> <br>
-			<select id = "educationDropdown">
-				<option value ="Some High School">Some High School</option>
-				<option value ="High School">High School</option>
-				<option value ="Some College">Some College</option>
-				<option value ="Bachelor's Degree">Bachelor's Degree</option>
-				<option value ="Master's Degree">Master's Degree</option>
-				<option value ="Doctorate">Doctorate</option>
-			</select>
 			<br>
 			<button onclick = "validator();">Submit</button>
 		</form>
-	</div>
-	<div id = "container">
-		
 	</div>
 	</body>
 </html>
