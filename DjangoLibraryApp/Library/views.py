@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.utils import timezone
 from django.views import generic
@@ -24,29 +24,26 @@ class AboutView(generic.TemplateView):
     template_name = 'Library/about.html'
 
 class SearchView(generic.ListView):
-    model = Book
     template_name = 'Library/system_books.html'
     context_object_name = 'book_list'
     
-    def head(self, *args, **kwargs):
-       return HttpResponse('') 
+    def post(self, request):
+        search = request.POST.get('searchBook', None)
+        search_type = request.POST.get('choice', None)
 
-    def get_context_data(self, **kwargs):
-        context = super(SearchView, self).get_context_data(**kwargs)
-        search = self.request.POST['searchBook']
-        search_ty = self.request.POST['choice']
-        if (search_ty == 'title'):
-            book_list = Book.objects.filter(title=search)
-        elif (search_ty == 'author'):
-            book_list = Book.objects.filter(author=search)
-        elif (search_ty == 'publisher'):
-            book_list = Book.objects.filter(publisher=search)
-        elif (search_ty == 'isbn'):
-            book_list = Book.objects.filter(isbn=search)
-        else:
-            book_list = None
-        context['book_list'] = book_list
-        return context
+        if (search_type == 'title'):
+            book_list = Book.objects.filter(title__icontains=search)
+            print book_list
+        elif (search_type == 'author'):
+            book_list = Book.objects.filter(author__icontains=search)
+        elif (search_type == 'publisher'):
+            book_list = Book.objects.filter(publisher__icontains=search)
+        elif (search_type == 'isbn'):
+            book_list = Book.objects.filter(isbn__icontains=search)
+        elif (search_type == None):
+            book_list = Book.objects.filter(title__icontains=search) 
+        
+        return render(request, 'Library/system_books.html', {'book_list': book_list})
 
 class SystemBookView(generic.ListView):
     template_name = 'Library/system_books.html'
