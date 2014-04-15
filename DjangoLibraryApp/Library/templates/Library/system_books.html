@@ -35,9 +35,17 @@
                     <input type="checkbox" value="{{aBook.id}}"/>
                     <a id="book{{aBook.id}}" href="{% url 'Library:detail_book' aBook.id %}">{{aBook.title}}</a>
                     </li>
+                {% if forloop.last %}
+                    <li class="book">
+                    <input type="checkbox" value="{{aBook.id}}"/>
+                    <a id="book{{aBook.id}}" href="{% url 'Library:detail_book' aBook.id %}">{{aBook.title}}</a>
+                    </li>
+                    <input type="submit" value="Submit"/>
+                {% endif %}
+                {% empty %}
+                    <p><b>Sorry, no results are available.</b></p>
                 {% endfor %}
                 </ul>
-				<input type="submit" value="Submit"/>
 			</form>
 		</div>
 	</body>
