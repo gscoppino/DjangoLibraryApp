@@ -29,6 +29,9 @@
                                 <li class="book">
                                 <input type="checkbox" name="book{{book.id}}" value="{{book.id}}"/>
                                 <a id="book{{book.id}}" href="/book/{{book.id}}">{{book.title}}</a>
+                                {% if book.checkout_status == True %}
+                                <label>(Checked Out)</label>
+                                {% endif %}
                                 </li>
                             {% endfor %}
                         </ul>

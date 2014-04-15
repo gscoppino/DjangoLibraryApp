@@ -13,6 +13,9 @@
                 {% for book in recent_books.all %}
                     <p>
                     <a href="{% url 'Library:detail_book' book.id %}">{{book.title}} ({{book.pub_date.year}})</a>
+                    {% if book.checkout_status == True %}
+                    <label>(Checked Out)</label>
+                    {% endif %}
                     </p>
                 {% endfor %}
 		</div>
