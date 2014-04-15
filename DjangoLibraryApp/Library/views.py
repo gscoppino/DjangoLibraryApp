@@ -28,6 +28,9 @@ class SearchView(generic.ListView):
     template_name = 'Library/system_books.html'
     context_object_name = 'book_list'
     
+    def head(self, *args, **kwargs):
+       return HttpResponse('') 
+
     def get_context_data(self, **kwargs):
         context = super(SearchView, self).get_context_data(**kwargs)
         search = self.request.POST['searchBook']
