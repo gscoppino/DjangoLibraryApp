@@ -64,7 +64,7 @@ def checkout_or_return(request, book_id):
     try:
         user = User.objects.get(username=request.user)
         book = Book.objects.get(id=book_id)
-        if (book.checkout_client == user):
+        if (book.checkout_client is not None):
             book.checkout_client = None
             book.checkout_status = False
         else:
