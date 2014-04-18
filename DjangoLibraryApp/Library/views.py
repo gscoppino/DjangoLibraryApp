@@ -1,3 +1,4 @@
+from django.core.exceptions import *
 from django.contrib.auth.models import User
 from django.shortcuts import render 
 from django.http import HttpResponse, HttpResponseRedirect
@@ -60,6 +61,27 @@ class BookView(generic.DetailView):
     model = Book
     template_name = 'Library/book.html'
 
+def register_account(request):
+    try:
+        user = request.POST['username']
+        passwd = request.POST['password']
+        email = request.POST['email']
+        firstName = request.POST['firstName']
+        lastName = request.POST['lastName']
+        try:
+            user = User.objects.get(username=user)
+        except User.DoesNotExist:
+            user = User.objects.create_user(username=user, password=passwd)
+            user.email = email
+            user.first_name = firstName
+            user.last_name = lastName
+            user.save()
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponse("Username already in use")
+    except:
+        return HttpResponse("Something else unexpected happened.")
+
 def checkout_or_return(request, book_id):
     try:
         user = User.objects.get(username=request.user)
@@ -73,4 +95,4 @@ def checkout_or_return(request, book_id):
         book.save()
         return HttpResponseRedirect('/') 
     except:
-        return HttpResponse("wut")
+        return HttpResponse("Something else unexpected happened.")

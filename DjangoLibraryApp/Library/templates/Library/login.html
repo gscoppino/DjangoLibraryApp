@@ -94,7 +94,11 @@
         <a HREF = "http://spsu.edu"><IMG style="float:left; margin:20px;" id = "logo" SRC="{% static 'Library/images/spsu.gif' %}"></a>
 		<div id = "header"> 
 			<a class="menu" href="{% url 'Library:index' %}">Home</a> | 
-			<a class="menu" href="{% url 'Library:login' %}">Login</a> | 
+			 {% if user.is_authenticated %}
+            <a class="menu" href="{% url 'Library:logout' %}" title="Logout when ready.">Logout</a> |
+            {% else %}
+            <a class="menu" href="{% url 'Library:login' %}" title="Login to check in/out books.">Login</a> |
+            {% endif %} 
 			<a class="menu" href="{% url 'Library:about' %}">About</a> |
 			<a class="menu" href="{% url 'Library:detail_system' %}">Books</a>
 		<br>
@@ -112,17 +116,16 @@
             <input type="submit" value="Login"/> 
             <input type="hidden" name="next" value="{{ next }}"/>
         </form>
-		<form name="signupForm" style="float:right">
+		<form name="signupForm" method="post" action="{% url 'Library:signup' %}" style="float:right">
+			{% csrf_token %}
             <p><b>Don't have an account? Sign up today!</b></p>
-			First name: <input type ="text" name ="fnameTB"><br>
-			Last name: <input type = "text" name = "lnameTB"><br>
-			Major: <input type = "text" name = "majorTB"><br>
-			Email: <input type = "text" name = "emailTB"><br>
-			Sex:
-			<input type ="radio" name = "maleR">Male
-			<input type ="radio" name = "femaleR">Female<br>
-			<br>
-			<button onclick = "validator();">Submit</button>
+            User Name: <input type="text" name="username"/><br>
+            Password <input type="password" name="password"/><br>
+			Email: <input type="text" name = "email"/><br>
+			First name: <input type="text" name ="firstName"/><br>
+			Last name: <input type="text" name = "lastName"/><br>
+			<input type="submit" value="Sign Up"/>
+			<input type="hidden" name="next" value="/"/>
 		</form>
 	</div>
 	</body>
