@@ -86,12 +86,13 @@ def checkout_or_return(request, book_id):
     try:
         user = User.objects.get(username=request.user)
         book = Book.objects.get(id=book_id)
-        if (book.checkout_client is not None):
+        if (book.checkout_client is not None and book.checkout_client==user):
             book.checkout_client = None
             book.checkout_status = False
         else:
-            book.checkout_client = user 
-            book.checkout_status = True
+            if (user.book_set.count() < 8):
+                book.checkout_client = user 
+                book.checkout_status = True
         book.save()
         return HttpResponseRedirect('/') 
     except:
