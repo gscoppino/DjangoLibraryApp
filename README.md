@@ -8,6 +8,8 @@ Usage
 
 - Clone this repository into a folder of your choice
 
+- Install Virtualbox
+
 - Install Vagrant
 
 - Use the 'cd' command to navigate into the project directory from the CLI, 

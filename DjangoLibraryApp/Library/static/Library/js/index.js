@@ -1,3 +1,5 @@
+/* Authors: Giuseppe Scoppino, Nathanael Thompson 2013-2014 */
+
 function Clock()
 {
     /* Clock To Do List
